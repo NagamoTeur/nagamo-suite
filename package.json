@@ -1,0 +1,15 @@
+{
+  "name": "nagamo-suite",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:backend": "cd backend && NODE_ENV=development JWT_SECRET=a7d!2b@3^c$4d5e6f*7g8h9i0jKlmNop npm run start:dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:prisma": "cd backend && npx prisma studio",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:prisma\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
+
